@@ -1,0 +1,14 @@
+.event-head{
+    text-align: center;
+}
+.input-panel {
+    background: white;
+    height: calc(100vh - 180px);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+.fieldError {
+    font-size: 10px;
+    color: red;
+}

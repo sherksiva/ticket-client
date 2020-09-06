@@ -1,0 +1,27 @@
+<div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Events">
+  </div>
+  <div class="container">
+    <div class="row">
+    <div *ngFor="let event of eventData | filter:searchText; index as i" class="col-md-3 ">
+        <div class="box-panel">
+            <div class="col-md-12 title-panel">
+                {{event.name}}
+            </div>
+            <div class="col-md-12 content-panel">
+                <div class="row">
+                    <div class="col-md-5 p-0">
+                        <img class="display-image" [src]="imageUrl">
+                    </div>
+                    <div class="col-md-7">
+                            <p><span>Seats available : <span class="number_of_seats">{{event.seats}}</span></span></p>
+                            <span>{{event.created | date }}</span>
+                            <button style="font-size: 12px;" type="button" class="btn btn-primary" [routerLink]="['booking', event._id]">Book now</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
